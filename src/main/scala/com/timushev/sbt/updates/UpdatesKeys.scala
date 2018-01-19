@@ -17,6 +17,10 @@ trait UpdatesKeys {
   lazy val dependencyUpdatesData = taskKey[Map[ModuleID, SortedSet[Version]]]("")
   lazy val dependencyUpdates = taskKey[Unit]("Shows a list of project dependencies that can be updated.")
   lazy val dependencyUpdatesReport = taskKey[File]("Writes a list of project dependencies that can be updated to a file.")
+  lazy val dependencyUpdatesTransitiveReportFile = settingKey[File]("Transitive dependency updates report file.")
+  lazy val dependencyUpdatesTransitiveData = taskKey[Map[ModuleID, SortedSet[Version]]]("")
+  lazy val dependencyUpdatesTransitive = taskKey[Unit]("Shows a list of transitive project dependencies that can be updated.")
+  lazy val dependencyUpdatesTransitiveReport = taskKey[File]("Writes a list of transitive project dependencies that can be updated to a file.")
 }
 
 object UpdatesKeys extends UpdatesKeys

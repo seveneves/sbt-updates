@@ -22,3 +22,6 @@ git.gitTagToVersionNumber := {
 }
 
 scriptedSbt := Option(System.getenv("SBT_SCRIPTED_VERSION")).getOrElse((sbtVersion in pluginCrossBuild).value)
+//
+//sbtVersion in pluginCrossBuild := "0.13.16"
+//scalaVersion := "2.10.6"
